@@ -28,9 +28,8 @@ class WebdriverCookies:
                     if cookie.get("name") == self.cookie_need:
                         logger.success("Куки получены")
                         return cookie.get("value")
-                    time.sleep(5)
-
-                return None
+                time.sleep(5)
+            return None
         finally:
             driver.quit()
 
